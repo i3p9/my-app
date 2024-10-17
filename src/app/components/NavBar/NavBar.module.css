@@ -1,0 +1,55 @@
+.navItem {
+	position: relative;
+	display: inline-block; /* Ensure the width is limited to the text */
+}
+
+.navItem::after {
+	content: "";
+	position: absolute;
+	bottom: -2px; /* Adjust this value as needed */
+	left: 0;
+	width: 100%;
+	height: 2px; /* The height of the underline */
+	/* background-color: black; The color of the underline */
+	background: linear-gradient(
+		to right,
+		transparent,
+		darkgreen,
+		transparent
+	); /* Gradient from white to black to white */
+
+	opacity: 0;
+	transform: scaleX(0); /* Initially hidden */
+	transition: opacity 0.2s cubic-bezier(0, 0, 0.2, 1),
+		transform 0.2s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.navItem:hover::after {
+	opacity: 1;
+	transform: scaleX(1); /* Revealed on hover */
+}
+
+.menu {
+	display: none;
+	position: absolute;
+	top: calc(100% - 6px);
+	right: 0;
+	/* left: 0; */
+	background-color: white;
+	padding: 1rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 0.25rem;
+	z-index: 10;
+	width: 100%;
+	transform: translateY(-10px);
+	opacity: 0; /* Start hidden */
+	transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.navItem:hover + .menu,
+.menu:hover {
+	display: flex;
+	padding: 1rem 7rem 7rem 7rem;
+	opacity: 1; /* Fade in */
+	transform: translateY(0); /* Slide down into view */
+}
