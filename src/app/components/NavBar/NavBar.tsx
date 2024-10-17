@@ -2,9 +2,11 @@ import { IoStar } from "react-icons/io5";
 import { FaSearch } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { FaChevronDown } from "react-icons/fa";
+import logo from "@/assets/images/logo.webp";
 
 import styles from "./NavBar.module.css";
 import clsx from "clsx";
+import Image from "next/image";
 const navItems = [
 	"Brands",
 	"Mens",
@@ -88,14 +90,7 @@ const NavBar = () => {
 			</div>
 
 			<div className='max-w-screen-xl mx-auto flex items-start justify-between  mt-4'>
-				<picture>
-					<img
-						alt='logo'
-						width='418.5px'
-						height='40px'
-						src='https://i.ibb.co.com/8sdsLxC/logo.webp'
-					/>
-				</picture>
+				<Image alt='logo' width='418.5' height='40' src={logo} />
 				<div className='flex gap-1 items-center'>
 					{new Array(5).fill(null).map(() => {
 						return <IoStar key={"ss"} />;
