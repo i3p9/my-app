@@ -1,8 +1,5 @@
 import Image from "next/image";
-import {
-	imageBlockDataRect,
-	ImageBlockProps,
-} from "@/data/imageblock";
+import { imageBlockDataRect } from "@/data/imageblock";
 import { imageBlockDataSquare } from "@/data/imageblock";
 const ImageBlock = () => {
 	return (

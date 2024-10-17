@@ -1,5 +1,4 @@
 import Image from "next/image";
-import watch1 from "@/assets/images/watch1.webp";
 import { Watch } from "@/data/watches";
 import { FaCircle } from "react-icons/fa";
 
