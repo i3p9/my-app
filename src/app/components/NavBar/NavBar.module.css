@@ -1,22 +1,21 @@
 .navItem {
 	position: relative;
-	display: inline-block; /* Ensure the width is limited to the text */
+	display: inline-block;
 }
 
 .navItem::after {
 	content: "";
 	position: absolute;
-	bottom: -2px; /* Adjust this value as needed */
+	bottom: -2px;
 	left: 0;
 	width: 100%;
-	height: 2px; /* The height of the underline */
-	/* background-color: black; The color of the underline */
+	height: 2px;
 	background: linear-gradient(
 		to right,
 		transparent,
 		darkgreen,
 		transparent
-	); /* Gradient from white to black to white */
+	);
 
 	opacity: 0;
 	transform: scaleX(0); /* Initially hidden */
@@ -26,7 +25,7 @@
 
 .navItem:hover::after {
 	opacity: 1;
-	transform: scaleX(1); /* Revealed on hover */
+	transform: scaleX(1); 
 }
 
 .menu {
@@ -42,7 +41,7 @@
 	z-index: 10;
 	width: 100%;
 	transform: translateY(-10px);
-	opacity: 0; /* Start hidden */
+	opacity: 0; 
 	transition: opacity 0.3s ease, transform 0.5s ease;
 }
 
@@ -51,5 +50,5 @@
 	display: flex;
 	padding: 1rem 7rem 7rem 7rem;
 	opacity: 1; /* Fade in */
-	transform: translateY(0); /* Slide down into view */
+	transform: translateY(0);
 }
